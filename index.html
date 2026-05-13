@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Em construção</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/77385fd8cc.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div class="hero">
+        <span id="Title">Em construção</span>
+        <h3>While you wait... Watch this!</h3>
+        <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/991OVdd7GJQ?si=3SCuRXt_vWzM8-DV&amp;controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+
+        <br>
+        <!-- Redes sociais -->
+            <a href="https://www.reddit.com/user/Raposixx/" class="button"><i class="fa-brands fa-reddit"></i></a>
+            <a href="https://discord.com/users/675792435972014120" class="button"><i class="fa-brands fa-discord"></i></a>
+            <a href="https://github.com/Raposix" class="button"><i class="fa-brands fa-github"></i></a>
+            
+        </div>
+
+        <div class="footer">
+        <p class="desc">art from <br>Fabulous Beasts Donghua.</p>
+        <img class="rodape" src="./src/img/rodape.png">
+        </div>
+    <script>
+        const words = ["Em construção", "Under construction", "En construcción"];
+            let i = 0;
+
+            const el = document.getElementById("Title");
+
+            // começa visível
+            el.classList.add("fade-in");
+
+            function changeText() {
+            // anima saída
+            el.classList.remove("fade-in");
+            el.classList.add("fade-out");
+
+            setTimeout(() => {
+                // troca palavra
+                i = (i + 1) % words.length;
+                el.textContent = words[i];
+
+                // coloca embaixo invisível
+                el.classList.remove("fade-out");
+                el.classList.add("hidden-down");
+
+                // força reflow (reinicia animação)
+                el.offsetHeight;
+
+                // anima entrada
+                el.classList.remove("hidden-down");
+                el.classList.add("fade-in");
+
+            }, 600); // tempo igual ao transition
+            }
+
+            setInterval(changeText, 3000);
+    </script>
+
+    
+</body>
+</html>

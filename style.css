@@ -1,0 +1,92 @@
+@import url('https://fonts.googleapis.com/css2?family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Urbanist', sans-serif;
+}
+
+body {
+    background-color: #000;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+}
+
+.hero {
+    color: #fff;
+    text-align: center;
+    margin-top: 20vh;
+}
+
+.hero span {
+    font-size : 3rem;
+    color: #fff;
+    animation: fadeIn 2s ease-in-out infinite;
+    font-weight: bold;
+}
+
+#Title {
+    font-weight: 700;
+
+    display: inline-block;
+
+    transition: all 0.6s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+
+.hidden-down {
+    opacity: 0;
+    transform: translateY(30px);
+}
+
+.fade-in {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.fade-out {
+    opacity: 0;
+    transform: translateY(-30px);
+}
+
+.hero iframe {
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+.hero a {
+    text-decoration: none;
+    color: #fff;
+    transition: opacity 0.3s ease;
+}
+
+.hero a:hover {
+    opacity: 0.8;
+}
+
+.rodape {
+    width: 250px;       /* ← ajusta o tamanho */
+    height: auto;
+    opacity: 0.8;
+}
+
+.desc {
+    color: rgba(255, 255, 255, 0.4);
+    font-size: 0.75rem;
+    padding: 0 16px 12px;       /* ← espaço da borda */
+    pointer-events: none;
+    text-align: right;
+    font-style: italic;
+}
+.footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    align-items: flex-end;      /* ← gruda tudo na base */
+    justify-content: flex-end; /* ← texto na esquerda, img na direita */
+    pointer-events: none;
+}
