@@ -90,3 +90,46 @@ body {
     justify-content: flex-end; /* ← texto na esquerda, img na direita */
     pointer-events: none;
 }
+
+/* ================================
+   RESPONSIVO
+   ================================ */
+
+@media (max-width: 600px) {
+    .hero {
+        margin-top: 10vh;
+        padding: 0 16px;
+    }
+
+    .hero span {
+        font-size: 2rem;
+    }
+
+    .hero iframe {
+        width: 100%;
+        height: 200px;
+    }
+
+    .rodape {
+        width: 130px;
+    }
+
+    .desc {
+        font-size: 0.65rem;
+    }
+}
+
+@media (min-width: 601px) and (max-width: 1024px) {
+    .hero {
+        padding: 0 24px;
+    }
+
+    .hero iframe {
+        width: 100%;
+        height: 260px;
+    }
+
+    .rodape {
+        width: 190px;
+    }
+}
